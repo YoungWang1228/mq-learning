@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: rocketmq-mson-service-b
+
+rocketmq:
+  name-server: 192.168.99.100:25670
+  producer:
+    group: ${spring.application.name}

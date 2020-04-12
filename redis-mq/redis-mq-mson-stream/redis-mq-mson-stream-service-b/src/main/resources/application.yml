@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: redis-mq-mson-stream-service-b
+  redis:
+    database: 0           # redis 实例，根据实际填写
+#    password: pwdBU00310 # redis 密码，根据实际填写
+    host: 192.168.99.100       # redis IP地址，根据实际填写
+    port: 6379            # redis 端口，根据实际填写

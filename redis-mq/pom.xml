@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>mq-learning</artifactId>
+    <groupId>com.youngwang.mq</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>redis-mq</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>redis-mq-oson-list</module>
+    <module>redis-mq-oson-stream</module>
+    <module>redis-mq-mson-list</module>
+    <module>redis-mq-mson-stream</module>
+    <module>redis-mq-broadcasting-pubsub</module>
+    <module>redis-mq-broadcasting-stream</module>
+  </modules>
+</project>

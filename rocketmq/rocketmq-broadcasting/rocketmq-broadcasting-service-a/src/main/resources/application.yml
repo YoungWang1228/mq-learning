@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rocketmq-broadcasting-service-a
+
+rocketmq:
+  name-server: 192.168.99.100:25670
+  producer:
+    group: ${spring.application.name}
