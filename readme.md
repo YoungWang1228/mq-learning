@@ -15,3 +15,16 @@
 - **kafka**    
 
 - **spring-cloud-stream 使用**    
+
+---
+
+本项目使用的 `springboot` 版本为 `2.2.6.RELEASE`   
+   
+在模块命令中
+* `oson` 代表单服务单节点
+* `mson` 代表多服务单节点
+* `broadcasting` 代表广播
+
+```!
+ 模块中的消息发送端都放在 `test` 目录下面的单元测试里面。
+```
