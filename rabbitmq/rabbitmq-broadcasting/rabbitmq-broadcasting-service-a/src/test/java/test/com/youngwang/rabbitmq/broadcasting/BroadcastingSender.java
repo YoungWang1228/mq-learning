@@ -24,10 +24,10 @@ public class BroadcastingSender {
     @Test
     public void sendTopicMessage() {
         for (int i = 0; i < 10; i++) {
-            String message = "mson " + i;
-            amqpTemplate.convertAndSend(TopicBroadcastingReceiver.BROADCASTING_EXCHANGE, TopicBroadcastingReceiver.BROADCASTING_ROUTING_KEY, message);
-            System.out.printf("exchange: %s, routingKey: %s, message: %d \n",
-                    TopicBroadcastingReceiver.BROADCASTING_EXCHANGE, TopicBroadcastingReceiver.BROADCASTING_ROUTING_KEY, i);
+            String message = "broadcasting " + i;
+            amqpTemplate.convertAndSend(TopicBroadcastingReceiver.BROADCASTING_EXCHANGE, "", message);
+            System.out.printf("exchange: %s, broadcasting , message: %d \n",
+                    TopicBroadcastingReceiver.BROADCASTING_EXCHANGE, i);
         }
     }
 }

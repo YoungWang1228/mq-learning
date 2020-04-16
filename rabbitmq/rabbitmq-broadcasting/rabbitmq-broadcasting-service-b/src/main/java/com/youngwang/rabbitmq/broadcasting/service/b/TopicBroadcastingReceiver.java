@@ -16,7 +16,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class TopicBroadcastingReceiver {
     public static final String BROADCASTING_EXCHANGE = "broadcasting-exchange";
-    public static final String BROADCASTING_ROUTING_KEY = "broadcasting-routing-key";
 
     @Autowired
     public AmqpTemplate amqpTemplate;
@@ -24,8 +23,7 @@ public class TopicBroadcastingReceiver {
     @RabbitListener(
             bindings = @QueueBinding(
                     value = @Queue,
-                    exchange = @Exchange(value = BROADCASTING_EXCHANGE, type = ExchangeTypes.TOPIC),
-                    key = BROADCASTING_ROUTING_KEY
+                    exchange = @Exchange(value = BROADCASTING_EXCHANGE, type = ExchangeTypes.FANOUT)
             )
     )
     public void receive(String msg) {
